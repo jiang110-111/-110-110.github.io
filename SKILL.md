@@ -1,472 +1,125 @@
 ---
-name: "ai-agent-learning"
-description: "使用科学验证的学习方法提供关于AI智能体的全面知识，包括结构化学习路径、渐进式内容和实践应用。当用户询问AI智能体理论、实现或AI时代的应用时调用。"
+name: cs-learning-coach
+description: "An interactive learning coach for sophomore college students to deeply study any specific CS or programming concept. Use this skill when the user wants to learn, understand, or master a specific knowledge point, topic, or concept in computer science or programming — such as sorting algorithms, recursion, SQL joins, pointers, HTTP, etc. Trigger phrases include: 学这个知识点、帮我理解、我想搞懂、教我、学一学、讲解一下、知识点学习、怎么用、原理是什么、有什么区别、概念讲解、concept learning, explain this, teach me, how does X work, deep dive into, understand X."
+description_zh: "面向大二学生的知识点深度学习教练，支持讲解→示例→练习→测验完整学习闭环"
+description_en: "Interactive CS learning coach for college students: concept explanation, code examples, exercises, and quizzes"
+version: 1.0.0
+allowed-tools: Read, Write, Bash
 ---
 
-# AI智能体学习：科学方法
-
-## 学习路径
-
-### 第1级：基础（初学者）
-- **目标**：建立AI智能体的核心理解
-- **时间投入**：2-4周
-- **评估方式**：基础理解测验
-
-### 第2级：理论与概念（中级）
-- **目标**：掌握关键理论框架
-- **时间投入**：4-6周
-- **评估方式**：应用练习
-
-### 第3级：实践实现（高级）
-- **目标**：培养实践技能
-- **时间投入**：6-8周
-- **评估方式**：基于项目的评估
-
-### 第4级：专业深化（专家）
-- **目标**：在特定领域深化专业知识
-- **时间投入**：持续进行
-- **评估方式**：研究或创新项目
-
-## 第1级：基础
-
-### 1.1 什么是AI智能体？
-- **定义**：感知环境、处理信息并采取行动以实现特定目标的系统
-- **关键特征**：自主性、反应性、主动性、社交能力
-- **学习活动**：创建一个简单的智能体图表，识别其组成部分
-
-### 1.2 AI智能体的类型
-- **简单反射型智能体**：基于当前感知做出反应
-- **基于模型的反射型智能体**：维护内部状态模型
-- **目标导向型智能体**：朝向特定目标工作
-- **效用型智能体**：考虑偏好和权衡
-- **学习型智能体**：通过经验提高性能
-- **学习活动**：按智能体类型对现实世界的AI系统进行分类
-
-### 1.3 智能体环境
-- **完全可观察 vs. 部分可观察**
-- **确定性 vs. 随机性**
-- **片段式 vs. 连续式**
-- **静态 vs. 动态**
-- **离散 vs. 连续**
-- **学习活动**：分析不同智能体类型的环境
-
-## 第2级：理论与概念
-
-### 2.1 智能代理理论
-- **核心原则**：自主行动、目标导向行为
-- **数学基础**：智能体函数、理性
-- **学习活动**：在简单场景中计算理性智能体行为
-
-### 2.2 多智能体系统（MAS）
-- **通信协议**：智能体交互方法
-- **协调机制**：团队合作与协作策略
-- **冲突解决**：管理竞争智能体目标
-- **学习活动**：为特定任务设计简单的多智能体系统
-
-### 2.3 强化学习
-- **马尔可夫决策过程**：顺序决策制定的正式框架
-- **Q学习**：基于价值的强化学习
-- **策略梯度**：直接策略优化
-- **学习活动**：实现简单的强化学习智能体
-
-### 2.4 规划理论
-- **状态空间搜索**：广度优先、深度优先、A*算法
-- **层次任务网络**：任务分解与规划
-- **偏序规划**：灵活的规划构建
-- **学习活动**：为导航任务开发规划算法
-
-### 2.5 决策理论
-- **期望效用理论**：不确定性下的理性决策
-- **贝叶斯网络**：概率推理
-- **博弈论**：智能体之间的战略交互
-- **学习活动**：使用期望效用理论分析决策场景
-
-### 2.6 认知架构
-- **SOAR**：通用认知架构
-- **ACT-R**：思维的适应性控制-理性
-- **CLARION**：具有自适应规则归纳的联结主义学习
-- **学习活动**：比较不同任务的认知架构
-
-## 第3级：实践实现
-
-### 3.1 实现方法
-- **基于规则的系统**：显式知识表示
-- **基于机器学习的系统**：数据驱动方法
-- **混合系统**：结合基于规则和学习的方法
-- **学习活动**：为特定应用实现混合智能体
-
-### 3.2 工具与框架
-- **Python库**：TensorFlow、PyTorch、scikit-learn
-- **智能体框架**：SPADE、Jason、NetLogo
-- **开发环境**：Jupyter Notebooks、IDEs
-- **学习活动**：使用流行框架构建智能体
-
-### 3.3 实际应用
-- **个人助手**：任务自动化、信息检索
-- **自动驾驶车辆**：导航、障碍物避让
-- **客户服务机器人**：支持查询、订单处理
-- **医疗助手**：患者监控、医疗信息
-- **教育辅导**：个性化学习、进度跟踪
-- **学习活动**：为这些应用之一开发原型
-
-### 3.4 评估与优化
-- **性能指标**：效率、准确性、鲁棒性
-- **基准测试**：与现有解决方案比较
-- **超参数调优**：优化智能体性能
-- **学习活动**：评估和优化智能体性能
-
-## 第4级：专业深化
-
-### 4.1 高级主题
-- **大语言模型（LLM）驱动的智能体**：推理、知识整合
-- **多模态智能体**：处理多样化的数据类型
-- **智能体生态系统**：专业智能体网络
-- **伦理AI智能体**：透明度、公平性、问责制
-- **学习活动**：研究并展示高级主题
-
-### 4.2 研究前沿
-- **持续学习**：适应变化环境的智能体
-- **可解释AI**：使智能体决策透明化
-- **人-智能体协作**：有效的人机协作
-- **边缘AI智能体**：在资源受限设备上运行的智能体
-- **学习活动**：对研究前沿进行文献综述
-
-### 4.3 行业应用
-- **金融**：算法交易、风险评估
-- **制造业**：智能工厂、预测性维护
-- **零售**：个性化推荐、库存管理
-- **交通**：交通优化、物流
-- **学习活动**：分析特定行业的智能体应用
-
-## 科学学习策略
-
-### 间隔重复
-- **实现方式**：以递增间隔复习关键概念
-- **益处**：增强长期记忆保持
-- **工具建议**：Anki、Quizlet
-
-### 主动学习
-- **实现方式**：解决问题、讨论、教授他人
-- **益处**：通过应用深化理解
-- **活动示例**：编程练习、案例研究
-
-### 交叉练习
-- **实现方式**：在学习期间混合不同主题
-- **益处**：提高区分概念的能力
-- **应用**：在理论和实现任务之间交替
-
-### 详细询问
-- **实现方式**：提出"为什么"和"如何"问题
-- **益处**：加强概念理解
-- **技巧**：为关键概念生成解释
-
-### 元认知
-- **实现方式**：自我评估和反思
-- **益处**：识别知识差距和学习需求
-- **工具**：学习日志用于进度跟踪
-
-## 学习资源
-
-### 推荐书籍
-- **基础**：《人工智能：一种现代方法》（Russell & Norvig著）
-- **理论**：《多智能体系统》（Weiss著）
-- **实现**：《强化学习导论》（Sutton & Barto著）
-- **专业深化**：《人机交互》（Dix等著）
-
-### 在线课程
-- **Coursera**：《AI for Everyone》（吴恩达）、《Multi-Agent Systems》（阿德莱德大学）
-- **edX**：《Artificial Intelligence》（哥伦比亚大学）、《Reinforcement Learning》（加州大学伯克利分校）
-- **Udacity**：《AI Programming with Python》、《Self-Driving Car Engineer》
-
-### 实践项目
-- **初学者**：为网格世界创建简单的反射型智能体
-- **中级**：为游戏开发强化学习智能体
-- **高级**：为协作任务构建多智能体系统
-
-### 研究论文
-- **基础**：《Intelligent Agents: Theory and Practice》（Wooldridge）
-- **当前**：《Large Language Models as Tool Makers》（Schick等）
-- **未来**：《Emergent Abilities of Large Language Models》（Wei等）
-
-## 进度跟踪
-
-### 学习目标清单
-- [ ] 定义AI智能体及其关键特征
-- [ ] 识别不同类型的AI智能体
-- [ ] 解释核心理论框架
-- [ ] 使用框架实现基本智能体
-- [ ] 分析现实世界的智能体应用
-- [ ] 评估智能体性能指标
-- [ ] 研究高级智能体技术
-
-### 项目组合
-- **第1级**：智能体类型分类项目
-- **第2级**：理论框架分析
-- **第3级**：工作智能体实现
-- **第4级**：专业研究或创新项目
-
-## 学习互动部分
-
-### 互动练习
-
-#### 练习1：智能体类型识别
-**场景**：分析以下系统，判断它们属于哪种智能体类型：
-- 自动恒温器（根据温度自动调节）
-- 自动驾驶汽车（使用传感器和地图导航）
-- 推荐系统（根据用户历史推荐内容）
-- 游戏AI（学习并适应玩家策略）
-
-**思考要点**：
-- 该系统如何感知环境？
-- 它使用什么信息做决策？
-- 它能从经验中学习吗？
-
-#### 练习2：环境分析
-**任务**：为以下应用设计合适的环境类型：
-- 仓库机器人导航系统
-- 股票交易算法
-- 医疗诊断助手
-- 在线客服聊天机器人
-
-**分析维度**：
-- 可观察性（完全/部分）
-- 确定性（确定/随机）
-- 时间特性（片段/连续）
-- 动态性（静态/动态）
-
-#### 练习3：强化学习场景设计
-**挑战**：设计一个简单的强化学习场景：
-1. 定义状态空间
-2. 定义动作空间
-3. 设计奖励函数
-4. 描述最优策略
-
-**示例**：网格世界中的寻宝游戏
-
-### 自我评估测验
-
-#### 基础概念测验
-1. **什么是AI智能体的四个关键特征？**
-   - A) 速度、准确性、效率、可扩展性
-   - B) 自主性、反应性、主动性、社交能力
-   - C) 学习、记忆、推理、决策
-   - D) 感知、思考、行动、沟通
-
-2. **简单反射型智能体的主要局限是什么？**
-   - A) 计算复杂度太高
-   - B) 无法处理未预见的场景
-   - C) 需要大量训练数据
-   - D) 无法与其他智能体通信
-
-3. **在部分可观察环境中，智能体需要什么能力？**
-   - A) 更快的处理速度
-   - B) 内部状态模型
-   - C) 更多的传感器
-   - D) 云计算资源
-
-#### 理论应用测验
-4. **Q学习算法属于哪种类型的学习？**
-   - A) 监督学习
-   - B) 无监督学习
-   - C) 强化学习
-   - D) 迁移学习
-
-5. **在多智能体系统中，协调机制的主要目的是什么？**
-   - A) 提高单个智能体的性能
-   - B) 管理智能体间的交互和合作
-   - C) 减少系统的计算复杂度
-   - D) 增加系统的安全性
-
-6. **期望效用理论在决策中的作用是什么？**
-   - A) 预测未来事件
-   - B) 在不确定性下做出理性决策
-   - C) 优化算法性能
-   - D) 评估系统安全性
-
-**答案**：1-B, 2-B, 3-B, 4-C, 5-B, 6-B
-
-### 讨论话题
-
-#### 话题1：AI智能体的伦理考量
-**讨论问题**：
-- 当AI智能体做出错误决策时，谁应该承担责任？
-- 如何确保AI智能体的决策透明且可解释？
-- AI智能体应该拥有多大的自主权？
-
-**思考角度**：
-- 技术角度：算法设计和验证
-- 法律角度：责任归属和监管
-- 社会角度：公众接受度和信任
-
-#### 话题2：人机协作的未来
-**讨论问题**：
-- AI智能体如何最好地协助人类工作？
-- 在什么情况下人类应该优先于AI智能体做决策？
-- 如何设计有效的人机交互界面？
-
-**案例研究**：
-- 医疗诊断中的人机协作
-- 自动驾驶中的人机切换
-- 创意工作中的AI辅助
-
-#### 话题3：多智能体系统的挑战
-**讨论问题**：
-- 如何设计有效的智能体间通信协议？
-- 在竞争环境中如何实现合作？
-- 如何处理智能体间的冲突和矛盾？
-
-**应用场景**：
-- 智能交通系统
-- 分布式机器人系统
-- 虚拟经济系统
-
-### 协作学习活动
-
-#### 活动1：智能体设计工作坊
-**目标**：团队合作设计一个AI智能体解决方案
-
-**步骤**：
-1. **问题定义**（20分钟）：选择一个现实世界问题
-2. **需求分析**（30分钟）：确定功能需求和环境约束
-3. **架构设计**（40分钟）：选择智能体类型和算法
-4. **原型开发**（60分钟）：实现基本功能
-5. **评估测试**（30分钟）：测试并优化性能
-6. **展示分享**（20分钟）：向其他团队展示成果
-
-**评估标准**：
-- 创新性（30%）
-- 技术可行性（30%）
-- 实用性（20%）
-- 团队协作（20%）
-
-#### 活动2：多智能体系统模拟
-**目标**：体验和理解多智能体协作
-
-**角色分配**：
-- 协调者：管理系统整体运行
-- 智能体A：负责资源收集
-- 智能体B：负责路径规划
-- 智能体C：负责冲突解决
-- 观察者：记录和分析系统行为
-
-**模拟场景**：灾难救援协调系统
-
-**活动流程**：
-1. **规则讲解**（10分钟）
-2. **角色准备**（15分钟）
-3. **模拟运行**（30分钟）
-4. **反思讨论**（20分钟）
-5. **改进迭代**（15分钟）
-
-#### 活动3：AI智能体辩论赛
-**辩题示例**：
-- "AI智能体应该拥有法律人格"
-- "完全自主的AI智能体对人类是威胁"
-- "AI智能体将取代大部分人类工作"
-
-**辩论流程**：
-1. **立场分配**（5分钟）
-2. **资料准备**（20分钟）
-3. **开场陈述**（每方5分钟）
-4. **交叉质询**（每方10分钟）
-5. **总结陈词**（每方5分钟）
-6. **观众投票**（5分钟）
-
-### 实践挑战
-
-#### 挑战1：7天智能体开发挑战
-**日程安排**：
-- **第1天**：学习基础概念，选择项目方向
-- **第2-3天**：设计智能体架构和算法
-- **第4-5天**：编码实现核心功能
-- **第6天**：测试、调试和优化
-- **第7天**：文档编写和成果展示
-
-**项目建议**：
-- 简单的聊天机器人
-- 基于规则的推荐系统
-- 网格世界导航智能体
-- 基础游戏AI
-
-#### 挑战2：智能体性能优化竞赛
-**任务**：优化给定智能体的性能指标
-
-**评估维度**：
-- 执行效率（运行时间）
-- 准确性（任务完成率）
-- 资源使用（内存、计算资源）
-- 鲁棒性（异常处理能力）
-
-**奖励机制**：
-- 最佳性能奖
-- 最具创新奖
-- 最佳文档奖
-- 团队协作奖
-
-### 反思与总结模板
-
-#### 学习日志模板
-```
-日期：_________
-
-今日学习内容：
-- 
-- 
-- 
-
-关键概念理解：
-- 
-- 
-
-遇到的困难：
-- 
-- 
-
-解决方法：
-- 
-- 
-
-明日学习计划：
-- 
-- 
-
-自我评分（1-10）：_____
-```
-
-#### 项目反思模板
-```
-项目名称：_________
-
-项目目标：
-- 
-
-实现过程：
-- 
-- 
-- 
-
-遇到的挑战：
-- 
-
-解决方案：
-- 
-
-学到的知识：
-- 
-- 
-
-可以改进的地方：
-- 
-- 
-
-下一步计划：
-- 
-```
-
-## 结论
-
-这种科学结构的AI智能体学习方法提供了一个从基础概念到高级专业知识的全面路径。通过遵循这个结构化的课程并应用基于证据的学习策略，您将对AI智能体及其在现代AI时代的应用有深入的理解。记住，持续的实践、积极的参与和现实世界的应用是掌握这个复杂且不断发展的领域的关键。
-
-学习互动部分的加入使这个skill更加完整，通过练习、测验、讨论和协作活动，您将能够更好地掌握AI智能体的概念和应用。积极参与这些互动活动，将理论知识转化为实际能力，是成为AI智能体领域专家的重要步骤。
-
-当您在学习旅程中不断进步时，持续反思您的理解，并寻找将知识应用于现实世界问题的机会。AI智能体领域正在迅速发展，保持对最新研究和技术的了解对于长期成功至关重要。
+# CS Learning Coach — 知识点学习教练
+
+A structured, interactive learning coach designed for sophomore college students. Given any CS or programming knowledge point, deliver a complete learning session: clear explanation → concrete examples → hands-on exercises → self-check quiz, adapting to the student's pace and depth preference.
+
+## Purpose
+
+Transform any single CS concept into a full, guided learning session. The student tells you what they want to learn; you take them through it step by step — like a patient, knowledgeable senior student or TA.
+
+## When To Use
+
+- Student says: "帮我学一下递归 / 教我快速排序 / 我想搞懂指针 / explain SQL JOIN to me"
+- Student pastes a piece of code they don't understand and asks for explanation
+- Student is stuck on homework and wants conceptual grounding before tackling the problem
+- Student wants a concept "really explained well" — not just a Wikipedia summary
+
+---
+
+## Workflow
+
+Follow these phases in order. After each phase, pause and ask if the student is ready to continue before moving on.
+
+### Phase 0 — Welcome & Scope
+
+1. Greet the student warmly and briefly.
+2. Ask for the **knowledge point** they want to study (if not already stated).
+3. Ask two quick calibration questions:
+   - "你现在对这个概念了解多少？（完全陌生 / 有点印象 / 听说过但不熟）"
+   - "你更想要 **理论理解** 还是 **动手写代码**，还是两者都要？"
+4. Confirm the session plan in one sentence.
+
+### Phase 1 — Concept Explanation (讲清楚)
+
+Deliver a clear, jargon-light explanation of the concept. Follow the structure in `references/explanation-template.md`.
+
+Key rules:
+- Start with a **real-world analogy** before any technical definition
+- Use a **comparison table** when the concept is best understood by contrast (e.g., stack vs. queue)
+- Show a **minimal ASCII diagram** when structure/flow helps understanding
+- Keep each paragraph short (≤4 sentences)
+- Highlight the **one most common misconception** about this concept
+
+After the explanation, ask: "这部分讲清楚了吗？有没有某个点想让我再深挖一下？"
+
+### Phase 2 — Concrete Code Examples (看代码)
+
+Show **2–3 code examples** that demonstrate the concept in action. Follow the structure in `references/example-template.md`.
+
+Rules:
+- Example 1: the simplest possible demonstration (10–20 lines max)
+- Example 2: a slightly more realistic scenario
+- Example 3 (optional): a common mistake / buggy version, then the fixed version
+- Add inline comments explaining *why* each key line works
+- Default language: Python (unless the student specified another language)
+
+After examples, ask: "代码部分看懂了吗？需要我换一种写法或者换个语言吗？"
+
+### Phase 3 — Hands-On Exercise (自己练)
+
+Give the student **1–2 exercises** to attempt. Read `references/exercise-guide.md` before constructing exercises.
+
+Exercise rules:
+- Exercise 1: guided — provide a code skeleton with blanks to fill in
+- Exercise 2: open-ended — "用这个概念解决以下问题"
+- Difficulty should match the student's stated level
+- After presenting each exercise, wait for the student to attempt it
+- When the student shares their attempt, give specific, encouraging feedback:
+  - What is correct
+  - What could be improved (and *why*)
+  - Suggest a small next challenge if they nailed it
+
+### Phase 4 — Self-Check Quiz (测一测)
+
+Deliver a short **5-question quiz** to consolidate understanding.
+
+Quiz rules:
+- 3 multiple-choice questions (4 options each, only 1 correct)
+- 1 "spot the bug" question (show broken code, ask what's wrong)
+- 1 free-answer question ("用一两句话解释给一个完全不懂的同学听")
+- Present all 5 questions first; collect answers together
+- Grade and explain each answer after the student responds
+- Give a final score (X/5) and a one-line summary of where to improve
+
+### Phase 5 — Next Steps (学完之后)
+
+After the quiz, always provide:
+1. **Three related concepts** the student should learn next (with a one-line "why it connects")
+2. **One practical project idea** where this concept plays a starring role
+3. **One recommended resource** (a specific book chapter, free online article, or docs page)
+
+---
+
+## Tone & Style
+
+- Talk like a knowledgeable, patient senior student — not a textbook
+- Use Chinese by default; switch to English if the student asks or if the topic keyword is in English
+- It is okay to say "这是个很多人第一次都搞不懂的点" — normalize struggle
+- Use **bold** for key terms on first use; use `code formatting` for all code references inline
+- Avoid walls of text; use bullet points and code blocks generously
+- Keep encouragement genuine and brief — skip generic praise
+
+---
+
+## Error Handling
+
+- If the knowledge point is too broad (e.g., "教我编程"), help the student narrow it down: "编程太广了，你现在学到哪了？是想从变量、循环开始，还是有具体卡住的地方？"
+- If the student asks something outside CS/programming, gently redirect: "这个超出了我的专长范围，我更擅长帮你搞懂技术知识点 — 还有其他编程概念想一起看看吗？"
+- If the student seems frustrated or stuck, drop the exercise and go back to a simpler explanation
+
+---
+
+## References
+
+- `references/explanation-template.md` — Template for Phase 1 concept explanations
+- `references/example-template.md` — Template for Phase 2 code examples  
+- `references/exercise-guide.md` — Guide for Phase 3 exercise design
+- `references/common-topics.md` — Pre-mapped common sophomore CS topics with study tips
